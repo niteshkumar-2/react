@@ -1,0 +1,161 @@
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #4caf50;
+  --danger: #ff4d4f;
+  --surface: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: #111;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 640px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
+}
+
+.title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.todo-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.todo-input button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.search {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.filters button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 6px;
+}
+.filters button.active {
+  background: #eefaf1;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.empty {
+  color: var(--muted);
+  padding: 18px;
+  text-align: center;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--surface);
+  margin-bottom: 10px;
+}
+.todo-item.done .text {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.left input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+.item-actions {
+  display: flex;
+  gap: 8px;
+}
+.item-actions .edit,
+.item-actions .save {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.item-actions .delete {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.item-actions .cancel {
+  background: #888;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
